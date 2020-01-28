@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 4502
 var Gpio = require('onoff').Gpio; //require onoff to control GPIO
 var RelayPin = new Gpio(26, 'out'); //declare GPIO4 an output
 
