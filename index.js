@@ -9,11 +9,13 @@ app.get('/', (req, res) => res.send('Hello World!'))
 app.get('/on', (req, res) => {
     console.log('on!');
     RelayPin.writeSync(1)
+    res.send('on');
 });
 
 app.get('/off', (req, res) => {
     console.log('off!');
     RelayPin.writeSync(0)
+    res.send('off');
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
